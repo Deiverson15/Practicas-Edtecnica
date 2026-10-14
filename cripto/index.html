@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizador de Criptomonedas</title>
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+    <div class="container">
+
+        <img src="/img/cripto.jpg" alt="Imagen Criptomonedas">
+
+        <h1>Cotiza Criptomonedas al Instante</h1>
+
+
+        <form id="formulario">
+            <div>
+                <label for="moneda">Elige tu Moneda</label>
+                <select name="moneda" id="moneda">
+                    <option value="">-- Seleccione --</option>
+                    <option value="USD">Dólar Estadounidense</option>
+                    <option value="MXN">Peso Mexicano</option>
+                    <option value="EUR">Euro</option>
+                    <option value="GBP">Libra Esterlina</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="criptomoneda">Elige tu Criptomoneda</label>
+                <select name="criptomoneda" id="criptomoneda">
+                    <option value="">-- Seleccione --</option>
+                    <option value="BTC">Bitcoin</option>
+                    <option value="ETH">Ethereum</option>
+                    <option value="USDT">Tether</option>
+                    <option value="BNB">Binance Coin</option>
+                </select>
+            </div>
+
+            <input type="submit" value="Cotizar">
+        </form>
+
+
+        <div class="spinner" style="display: none;">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+
+
+        <div class="resultado">
+            <h2>Resultado</h2>
+            <p class="precio">El Precio es: <span>$0.00</span></p>
+            <p>Precio más alto del día: <span>$0.00</span></p>
+            <p>Precio más bajo del día: <span>$0.00</span></p>
+            <p>Variación últimas 24 horas: <span>0%</span></p>
+            <p>Última actualización: <span>--</span></p>
+        </div>
+    </div>
+</body>
+
+<script src="/js/criptomoneda.js"></script>
+</html>

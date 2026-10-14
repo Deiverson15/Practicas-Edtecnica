@@ -1,0 +1,208 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+:root {
+    --bg-color: #0d1117;
+    --card-bg: #161b22;
+    --primary: #38bdf8;
+    --primary-hover: #0ea5e9;
+    --accent: #22c55e;
+    --danger: #ef4444;
+    --text-main: #f0f6fc;
+    --text-muted: #8b949e;
+    --border-color: #30363d;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+
+.container {
+    background-color: var(--card-bg);
+    width: 100%;
+    max-width: 480px;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+
+.container img {
+    max-width: 110px;
+    height: auto;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 4px 10px rgba(56, 189, 248, 0.25));
+}
+
+h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1.8rem;
+    color: #ffffff;
+    line-height: 1.3;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+select {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    background-color: #0d1117;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+
+input[type="submit"] {
+    background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+    color: #041019;
+    border: none;
+    padding: 0.95rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: transform 0.15s ease, opacity 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    opacity: 0.95;
+    transform: translateY(-1px);
+}
+
+input[type="submit"]:active {
+    transform: translateY(0);
+}
+
+
+.error {
+    background-color: rgba(239, 68, 68, 0.15);
+    border: 1px solid var(--danger);
+    color: #fca5a5;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+
+.resultado {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    text-align: left;
+}
+
+.resultado h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--primary);
+}
+
+.resultado p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resultado p span {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.resultado p.precio {
+    font-size: 1.15rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.resultado p.precio span {
+    color: var(--accent);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+
+.spinner {
+    margin: 2rem auto;
+    width: 70px;
+    text-align: center;
+}
+
+.spinner > div {
+    width: 14px;
+    height: 14px;
+    background-color: var(--primary);
+    border-radius: 100%;
+    display: inline-block;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+    animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+    animation-delay: -0.16s;
+}
+
+@keyframes sk-bouncedelay {
+    0%, 80%, 100% { 
+        transform: scale(0);
+        opacity: 0.3;
+    } 
+    40% { 
+        transform: scale(1.0);
+        opacity: 1;
+    }
+}
